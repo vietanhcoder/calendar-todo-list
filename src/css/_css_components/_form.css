@@ -28,11 +28,36 @@ form .form-control {
 }
 
 .todo__wrapper {
-  background-color: white;
+  /* background-color: white; */
   padding: 15px;
 }
 
 .btn-container {
   display: flex;
   justify-content: flex-end;
+}
+
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.3;
+  color: red;
+}
+
+.todo-item {
+  margin-top: 10px;
+  background: white;
+  padding: 20px 20px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+.todo-item :first-child {
+  margin-top: 0;
+}
+
+#inputSearch {
+  padding: 20px;
+  font-size: 18px;
 }
