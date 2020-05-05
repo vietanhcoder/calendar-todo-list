@@ -83,9 +83,6 @@ const TodoForm = (props) => {
           id="inputSearch"
           placeholder="Please input your date for searching"
           onChange={(event) => props.handleChangeSearch(event)}
-
-          // onChange={(event) => setSearchValue(event.target.value)}
-          // value={searchValue}
         />
       </div>
     </>

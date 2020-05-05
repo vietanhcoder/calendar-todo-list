@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Col, Row } from "reactstrap";
 const Todo = (props) => {
-  const { todos } = props;
+  const { todosVisible } = props;
 
   const formatDate = (date) => {
     let datePicker =
@@ -16,8 +16,8 @@ const Todo = (props) => {
     <>
       <div className="todo__wrapper">
         <ul className="list-wrapper">
-          {todos.length > 0 ? (
-            todos.map((todo, idx) => {
+          {todosVisible.length > 0 ? (
+            todosVisible.map((todo, idx) => {
               return (
                 <li key={todo.id} className="todo-item">
                   <Row
