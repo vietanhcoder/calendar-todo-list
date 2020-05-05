@@ -1,0 +1,38 @@
+.form-wrapper {
+  padding: 10px;
+}
+
+form .form-group label {
+  font-size: 20px;
+}
+
+form .form-group input {
+  font-size: 18px;
+  padding: 10px;
+}
+
+form .form-control {
+  height: auto;
+}
+
+.btn-conttainer {
+  text-align: center;
+}
+
+.btn-addtodo {
+  margin-left: 10px;
+}
+
+.btn-addtodo:first-child {
+  margin-left: 0;
+}
+
+.todo__wrapper {
+  background-color: white;
+  padding: 15px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
