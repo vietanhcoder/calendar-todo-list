@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/github.com/calendar-todo-list/static/css/main.a9cf965a.chunk.css",
-    "main.js": "/github.com/calendar-todo-list/static/js/main.5c3d1723.chunk.js",
-    "main.js.map": "/github.com/calendar-todo-list/static/js/main.5c3d1723.chunk.js.map",
-    "runtime-main.js": "/github.com/calendar-todo-list/static/js/runtime-main.e3ca8ac4.js",
-    "runtime-main.js.map": "/github.com/calendar-todo-list/static/js/runtime-main.e3ca8ac4.js.map",
-    "static/css/2.30e53678.chunk.css": "/github.com/calendar-todo-list/static/css/2.30e53678.chunk.css",
-    "static/js/2.8aab68fd.chunk.js": "/github.com/calendar-todo-list/static/js/2.8aab68fd.chunk.js",
-    "static/js/2.8aab68fd.chunk.js.map": "/github.com/calendar-todo-list/static/js/2.8aab68fd.chunk.js.map",
-    "index.html": "/github.com/calendar-todo-list/index.html",
-    "precache-manifest.120d38932f939cd0adb13072991998e7.js": "/github.com/calendar-todo-list/precache-manifest.120d38932f939cd0adb13072991998e7.js",
-    "service-worker.js": "/github.com/calendar-todo-list/service-worker.js",
-    "static/css/2.30e53678.chunk.css.map": "/github.com/calendar-todo-list/static/css/2.30e53678.chunk.css.map",
-    "static/css/main.a9cf965a.chunk.css.map": "/github.com/calendar-todo-list/static/css/main.a9cf965a.chunk.css.map",
-    "static/js/2.8aab68fd.chunk.js.LICENSE.txt": "/github.com/calendar-todo-list/static/js/2.8aab68fd.chunk.js.LICENSE.txt"
+    "main.css": "/calendar-todo-list/static/css/main.a9cf965a.chunk.css",
+    "main.js": "/calendar-todo-list/static/js/main.ea8325af.chunk.js",
+    "main.js.map": "/calendar-todo-list/static/js/main.ea8325af.chunk.js.map",
+    "runtime-main.js": "/calendar-todo-list/static/js/runtime-main.f643e619.js",
+    "runtime-main.js.map": "/calendar-todo-list/static/js/runtime-main.f643e619.js.map",
+    "static/css/2.30e53678.chunk.css": "/calendar-todo-list/static/css/2.30e53678.chunk.css",
+    "static/js/2.8aab68fd.chunk.js": "/calendar-todo-list/static/js/2.8aab68fd.chunk.js",
+    "static/js/2.8aab68fd.chunk.js.map": "/calendar-todo-list/static/js/2.8aab68fd.chunk.js.map",
+    "index.html": "/calendar-todo-list/index.html",
+    "precache-manifest.55b0e0e345c19a84585acfd72d57ea69.js": "/calendar-todo-list/precache-manifest.55b0e0e345c19a84585acfd72d57ea69.js",
+    "service-worker.js": "/calendar-todo-list/service-worker.js",
+    "static/css/2.30e53678.chunk.css.map": "/calendar-todo-list/static/css/2.30e53678.chunk.css.map",
+    "static/css/main.a9cf965a.chunk.css.map": "/calendar-todo-list/static/css/main.a9cf965a.chunk.css.map",
+    "static/js/2.8aab68fd.chunk.js.LICENSE.txt": "/calendar-todo-list/static/js/2.8aab68fd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.e3ca8ac4.js",
+    "static/js/runtime-main.f643e619.js",
     "static/css/2.30e53678.chunk.css",
     "static/js/2.8aab68fd.chunk.js",
     "static/css/main.a9cf965a.chunk.css",
-    "static/js/main.5c3d1723.chunk.js"
+    "static/js/main.ea8325af.chunk.js"
   ]
 }
