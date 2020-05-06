@@ -6,14 +6,9 @@ import {
   SEARCH_DATE_TASK,
 } from "./types";
 
-export const setTasks = (title, date) => ({
+export const setTasks = (payload) => ({
   type: ADD_TASK,
-  payload: {
-    id: uuidv4(),
-    title: title,
-    isCompleted: false,
-    date: date,
-  },
+  payload
 });
 
 export const ToggleCompletion = (id) => ({
@@ -29,9 +24,7 @@ export const removeTodo = (id) => ({
     id,
   },
 });
-export const searchTasks = (dateSearch) => ({
+export const searchTasks = (payload) => ({
   type: SEARCH_DATE_TASK,
-  payload: {
-    dateSearch,
-  },
+  payload
 });

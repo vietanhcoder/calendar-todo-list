@@ -5,39 +5,25 @@ import {
   SEARCH_DATE_TASK,
 } from "./types";
 import { v4 as uuidv4 } from "uuid";
-import * as helpers from "../helpers/index";
 const initialState = {
   visibleTodoList: [
     {
       id: uuidv4(),
       title: "task default 1",
       isCompleted: false,
-      date: new Date(),
+      date: '5/6/2020'
     },
     {
       id: uuidv4(),
       title: "task default 2",
       isCompleted: false,
-      date: new Date(),
-    },
-  ],
-  initialTodoList: [
-    {
-      id: uuidv4(),
-      title: "task default 1",
-      isCompleted: false,
-      date: new Date(),
-    },
-    {
-      id: uuidv4(),
-      title: "task default 2",
-      isCompleted: false,
-      date: new Date(),
+      date: '5/7/2020'
     },
   ],
   loading: false,
   error: false,
   dateSearch: "",
+  title: ''
 };
 
 const reducers = (state = initialState, action) => {
@@ -46,7 +32,6 @@ const reducers = (state = initialState, action) => {
       return {
         ...state,
         visibleTodoList: [...state.visibleTodoList, action.payload],
-        initialTodoList: [...state.visibleTodoList, action.payload],
       };
     }
     case COMPLETE_TASK: {
@@ -60,6 +45,7 @@ const reducers = (state = initialState, action) => {
         }),
       };
     }
+    
     case REMOVE_TASK: {
       return {
         ...state,
@@ -69,13 +55,11 @@ const reducers = (state = initialState, action) => {
       };
     }
     case SEARCH_DATE_TASK: {
-      console.log(helpers);
+      const newTodoLists = state.visibleTodoList.filter(todo => todo.date === action.payload)
       return {
         ...state,
-        visibleTodoList: state.initialTodoList.filter((todo) =>
-          helpers.formatDate(todo.date).indexOf(action.payload.date)
-        ),
-      };
+        visibleTodoList: newTodoLists
+      }
     }
     default:
       return state;

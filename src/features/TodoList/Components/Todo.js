@@ -1,17 +1,10 @@
 import React from "react";
 import { Button, Col, Row } from "reactstrap";
+
 const Todo = (props) => {
   const { visibleTodoList } = props;
   console.log("OUTPUT: Todo -> visibleTodoList", visibleTodoList);
-  const formatDate = (date) => {
-    let datePicker =
-      parseInt(date.getMonth() + 1) +
-      "/" +
-      date.getDate() +
-      "/" +
-      date.getFullYear();
-    return datePicker;
-  };
+  
   return (
     <>
       <div className="todo__wrapper">
@@ -42,7 +35,7 @@ const Todo = (props) => {
                     <Col>
                       <div className="todo__date-time text-center">
                         <span className="todo__date-time__content">
-                          {formatDate(todo.date)}
+                          {todo.date}
                         </span>
                       </div>
                     </Col>

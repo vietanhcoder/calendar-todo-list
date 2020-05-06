@@ -17,17 +17,6 @@ const TodoList = ({
   removeTodo,
   searchTasks,
 }) => {
-  const _handleAddTodo = (todo) => {
-    if (Object.keys(todo).length > 0) {
-      // console.log(helpers.formatDate(todo.date));
-      const { title, date } = todo;
-      console.log("OUTPUT: _handleAddTodo -> title,date", title, date);
-
-      const todoDate = helpers.formatDate(date);
-      console.log("OUTPUT: _handleAddTodo -> todoDate", todoDate);
-      setTasks(title, date);
-    }
-  };
 
   //================================================================
   // Begin local storage
@@ -65,17 +54,6 @@ const TodoList = ({
     console.log("OUTPUT: _viewTodo -> id", id);
   };
 
-  // const formatDate = (date) => {
-  //   let datePicker =
-  //     parseInt(date.getMonth() + 1) +
-  //     "/" +
-  //     date.getDate() +
-  //     "/" +
-  //     date.getFullYear();
-  //   return datePicker;
-  // };
-  // End format date =================
-
   const _handleChangeSearch = (event) => {
     const { value } = event.target;
     if (value !== "") {
@@ -86,7 +64,6 @@ const TodoList = ({
   return (
     <div>
       <TodoForm
-        handleAddTodo={(todo) => _handleAddTodo(todo)}
         handleClearTodo={_handleClearTodo}
         handleChangeSearch={(event) => _handleChangeSearch(event)}
       />

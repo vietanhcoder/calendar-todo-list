@@ -9,26 +9,42 @@ import {
   Row,
   Badge,
 } from "reactstrap";
+import {connect} from 'react-redux';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { v4 as uuidv4 } from "uuid";
 
-const TodoForm = (props) => {
+import { setTasks, searchTasks } from '../../../redux/actions';
+
+import { formatDate } from '../../../helpers';
+
+const TodoForm = ({ setTasks, searchTasks }) => {
   const [startDate, setStartDate] = useState(new Date());
-  const [todo, setTodo] = useState({});
+  const [searchDate, setSearchDate] = useState(new Date());
+  const [todo, setTodo] = useState('');
 
   const handleChange = (e) => {
     const { value } = e.target;
     if (value !== "") {
-      const newObj = {
-        id: uuidv4(),
-        title: value,
-        isCompleted: false,
-        date: startDate,
-      };
-      setTodo(newObj);
+      setTodo(value);
     }
   };
+
+  const handleAddTodo = () => {
+    const newObj = {
+      id: uuidv4(),
+      title: todo,
+      isCompleted: false,
+      date: formatDate(startDate),
+    };
+    setTodo('');
+    setTasks(newObj)
+  }
+
+  const handleSearch = () => {
+    const format = formatDate(searchDate);
+    searchTasks(format)
+  }
 
   return (
     <>
@@ -46,6 +62,7 @@ const TodoForm = (props) => {
                   name="taskName"
                   id="inputTask"
                   placeholder="Please input your task"
+                  value={todo}
                   onChange={handleChange}
                 />
               </Col>
@@ -63,30 +80,42 @@ const TodoForm = (props) => {
             color="primary"
             className="btn-addtodo"
             size="lg"
-            onClick={() => props.handleAddTodo(todo)}
+            onClick={handleAddTodo}
           >
             Add Task
           </Button>
-          <Button
+          {/* <Button
             color="danger"
             className="btn-addtodo"
             size="lg"
             onClick={props.handleClearTodo}
           >
             Clear Task
-          </Button>
+          </Button> */}
         </div>
         <h5>Search tasks by day</h5>
-        <Input
-          type="text"
-          name="search"
-          id="inputSearch"
-          placeholder="Please input your date for searching"
-          onChange={(event) => props.handleChangeSearch(event)}
+        <DatePicker
+          selected={searchDate}
+          onChange={(date) => setSearchDate(date)}
         />
+        <Button
+            color="primary"
+            className="btn-addtodo"
+            size="lg"
+            onClick={handleSearch}
+          >
+            Search
+          </Button>
+
       </div>
     </>
   );
 };
 
-export default TodoForm;
+const mapDispatchToProps = {
+  setTasks,
+  searchTasks
+};
+
+export default connect(null, mapDispatchToProps)(TodoForm);
+
